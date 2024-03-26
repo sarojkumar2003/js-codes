@@ -1,0 +1,1 @@
+// In this lacture we learn how javaScript progrma actually run on our computer.
