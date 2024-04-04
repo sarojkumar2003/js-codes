@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DoM learnig</title>
+  <style>
+    .bg-black{
+      background-color: #212121;
+      color: #fff;
+    }
+  </style>
+</head>
+<body class="bg-black">
+
+  <div >
+    <h1 class="heading">DOM learning on chai aur code <span style="display: none">text text</span></h1>
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <input type="password" name="" id="">
+  
+  <ul>
+    <li class="list-item">one</li>
+    <li class="list-item">two</li>
+    <li class="list-item">Three</li>
+    <li class="list-item">four</li>
+  </ul>
+  
+  
+  </div>
+  
+</body>
+</html>
+
+<!-- write dom in console
+
+1. conslole.log(window)
+2. console.log(window.document)
+3. console.log(document)
+4. console.dir(document)
+5. console.log(document.baseURI)
+6. console.log(document.Links)
+7. console.log(document.Links[2])
+8. document.getElementById('write id')
+9. document.getElementById('write id').innerHTML = "<h>saroj</h>"
+ -->
+
+ <!-- ***  second  ***  -->
+
+ <!-- document.getElementById('title')
+2. document.getElementById('title').id
+3. document.getElementById('title').class
+4. document.getElementById('title').className
+5. document.getElementById('title').getAttribute('id' write you attribute)
+6. document.getElementById('title').getAttribute('class')
+7. document.getElementById('title').getAttribute('class', 'test')
+8. document.getElementById('title').getAttribute('class', 'test heading')
+ 
+9. document.getElementById('title')
+  const title = document.getElementById('title')
+NOTE* - we can acces easly
+
+title.style.backgroundClor = 'green'
+title.style.padding = "15px"
+title.style.borderRadius = "15px"
+
+*** how to get content
+title.textContent => show all the text is written on our code.
+
+title.innerHTML => it showes all the tags, what ever we use on this.
+
+title.innerText => show those text actually visible on our website
+
+
+document.getElementsByClassName('classname')
+
+**
+document.duerySelector('h1') //Send first h1 on our document
+document.duerySelector('h2')
+document.duerySelector('#title')
+document.duerySelector('.heading')
+
+document.querySelector('input[type="passward"]')
+document.querySelector('p:firset-child')
+
+document.querySelector('ul')
+
+const myul = document.querySelector('ul')
+
+const turnGreen = myul.querySelector('li')
+turnGreen.style.backgroundColor = "green"
+trunGreen.style.padding = "15px"
+
+document.querySelectorAll('li')
+const temoLiList = document.querySelectorAll('ul')
+temoLiList.forEach(function (l){
+  l.style.backgroundColor = 'green'
+})
+
+document.getElementsByClassName('list-item')
+const tempClassList = document.getElementsByClassName('list-item')
+tempClassList.forEach(function(li){
+  console.log(li)
+})
+
+tempClassList
+
+Array.from(tempClassList)
+const myConvertedArray = Array.form(tempClassList)
+myConvertedArray.forEach(function(li){
+  li.style.color = 'green'
+})
+-->

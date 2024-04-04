@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chai or code</title>
+</head>
+<body style="background-color: #212121; color: #fff">
+  
+</body>
+<script>
+  const func  = function (cha){
+  // create a new element
+  const div = document.createElement('div')
+  console.log(div);
+  div.className = "main"
+  div.id = "myId"
+  // random id generator
+  div.id = Math.round(Math.random() *10+1)
+
+  div.setAttribute("title","generated title")
+  // Add style
+  div.style.backgroundColor = "green"
+  div.style.padding = "12px"
+
+  // dispay div tag on page using js
+  // div.innerHTML = 'chai aur code' **not good to use becouse it gave copy
+  const addText = document.createTextNode(cha)
+  div.appendChild(addText)
+  document.body.appendChild(div)
+  }
+  func("ram aam khata hai")
+
+</script>
+</html>
