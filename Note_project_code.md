@@ -225,3 +225,34 @@ document.getElementById('start').addEventListener('click', startChangingColor)
 document.getElementById('stop').addEventListener('click', stopChangingColor)
 
 ```
+
+
+# project 6 Solution
+## key code Generator
+
+```javaScript
+
+const insert = document.querySelector("#insert");
+
+window.addEventListener("keydown", (e) => {
+  insert.innerHTML = `
+  <div class="coloe">
+  <table>
+  <tr>
+    <th>key</th>
+    <th>keycode</th>
+    <th>code</th>
+  </tr>
+  
+  <tr>
+    <td>${e.key === " " ? "space" : e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+</table>
+  </div>
+  `;
+});
+
+
+```
