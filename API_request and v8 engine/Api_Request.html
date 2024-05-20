@@ -1,0 +1,38 @@
+<!-- old method -->
+<!-- *** XML Request *** -->
+
+<!-- Ready State -->
+<!-- 
+1. UNSENT => (value) 0 => Client has been created. opem() not called yet.
+2. OPENED => 1 => open() has been called.
+3. HEADERS_RECEIVED => 2 => send() has been called, and headers and status are available.
+4. LOADING => 3 => Downloading; responseText holds partial data.
+5. DONE => 4 => The operation is complete. 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+
+<script>
+const requestUrl = 'https://api.github.com/users/sarojkumar2003' 
+const xhr = new XMLHttpRequest();
+xhr.open('GET', requestUrl)
+xhr.onreadystatechange = function (){
+  console.log(xhr.readyState);
+  if (xhr.readyState === 4) {
+    const data = JSON.parse(this.responseText)
+    console.log(data.name);
+  }
+}
+xhr.send()
+</script>
+</html>

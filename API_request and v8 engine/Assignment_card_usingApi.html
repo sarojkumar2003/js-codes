@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // API called
+
+      const requestUrl = "https://api.github.com/users/sarojkumar2003";
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", requestUrl);
+      xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+          const data = JSON.parse(this.responseText);
+          console.log(data.name);
+
+          // ELEMET CREATED
+          const Card = document.createElement("div");
+          Card.classList.add("document-card"); //add div class
+          Card.style.backgroundColor = "gray";
+          Card.style.padding = "10px";
+          Card.style.marginTop = "10px";
+          Card.style.width = "25rem";
+          Card.style.height = "30rem";
+          Card.style.borderRadius = "1rem";
+
+          
+          
+          const head = document.createElement("h1");
+          head.textContent = data.name;
+          head.style.marginLeft = "3rem";
+          Card.appendChild(head);
+
+          const image = document.createElement('img')
+          image.src = data.avatar_url;
+          image.style.height = '20rem'
+          image.style.width = '20rem'
+          image.style.marginLeft = '2rem'
+          image.style.borderRadius = '2rem'
+          Card.appendChild(image);
+
+          const para = document.createElement("p");
+          para.textContent = data.id;
+          Card.appendChild(para);
+
+          document.body.appendChild(Card);
+        }
+      };
+      xhr.send();
+    </script>
+  </body>
+</html>
